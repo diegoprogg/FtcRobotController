@@ -5,22 +5,22 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 
-import org.firstinspires.ftc.teamcode.packages.Botao;
+import org.firstinspires.ftc.teamcode.packages.BancadaDeTestes;
 
 @TeleOp
 @Disabled
 public class TesteBotao extends OpMode {
-    Botao botao1 = new Botao();
+    BancadaDeTestes bancadaDeTestes = new BancadaDeTestes();
 
     @Override
     public void init() {
-        botao1.init(hardwareMap);
+        bancadaDeTestes.init(hardwareMap);
     }
 
     @Override
     public void loop() {
         String StatusBotao = "NOT Pressed!";
-        if (botao1.botaoEstaPressionado()){
+        if (bancadaDeTestes.botaoEstaPressionado()){
             StatusBotao = "Pressed!";
         }
         telemetry.addData("Status Botão", StatusBotao);
